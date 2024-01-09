@@ -1,0 +1,37 @@
+.nicebutton {
+  margin-top: 100px;
+  margin-left: 500px;
+  padding: 15px 50px;
+  background-color: transparent;
+  color: black;
+  font-size: 30px;
+  font-weight: 700;
+  border: 2px solid gold;
+  border-radius: 10%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.nicebutton::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: -20px;
+  height: 0;
+  width: 100%;
+  background-color: orange;
+  z-index: -1;
+  transform: skewY(12deg);
+  transition: 0.8s;
+  -webkit-transition: 0.8s;
+  -moz-transition: 0.8s;
+  -ms-transition: 0.8s;
+  -o-transition: 0.8s;
+}
+
+.nicebutton:hover:before {
+  transform: skewY(0deg);
+  height: 140px;
+}
